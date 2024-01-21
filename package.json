@@ -1,0 +1,25 @@
+{
+	"name": "demo",
+	"version": "1.0.0",
+	"description": "统一下以后练习写demo的地方",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint-staged": "lint-staged",
+		"prepare": "husky install"
+	},
+	"author": "dksong",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "1.5.2",
+		"husky": "^8.0.0",
+		"lint-staged": "^15.2.0"
+	},
+	"lint-staged": {
+		"*": [
+			"biome check --apply --no-errors-on-unmatched --files-ignore-unknown=true"
+		]
+	},
+	"volta": {
+		"node": "18.19.0"
+	}
+}
